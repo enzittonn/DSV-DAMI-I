@@ -18,17 +18,17 @@ def check_scores(accuracy, precision, recall, f1):
 
     print("2. Precision test")
     try:
-        assert precision(a, b) == precision_score(a, b)
+        assert precision(a, b) == precision_score(b, a)
         print("Correct!")
     except:
-        print("Precision test failed! You should have got {0} but you got {1}".format(precision_score(a, b), precision(a, b)) )
+        print("Precision test failed! You should have got {0} but you got {1}".format(precision_score(b, a), precision(a, b)) )
 
     print("3. Recall test")
     try:
-        assert recall(a, b) == recall_score(a, b)
+        assert recall(a, b) == recall_score(b, a)
         print("Correct!")
     except:
-        print("Recall test failed! You should have got {0} but you got {1}".format(recall_score(a, b), recall(a, b)) )
+        print("Recall test failed! You should have got {0} but you got {1}".format(recall_score(b, a), recall(a, b)) )
 
     print("4. F1-score test")
     try:
